@@ -9,6 +9,7 @@ let planoDeNivel = `
 ......##############..
 ......................`;
 
+// La siguiente clase guarda un objeto de nivel. Su argumento debe ser la cadena de carateres que define el nivel
 class Nivel {
     constructor (plano) {
         let filas = plano.trim().split("\n").map(l => [...l]);
@@ -28,6 +29,7 @@ class Nivel {
     }
 }
 
+// Usaremos una clase Estado para dar seguimiento al estado de un juego que esta en ejecución
 class Estado {
     constructor (nivel, actores, estatus) {
         this.nivel = nivel;
