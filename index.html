@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Game</title>
 </head>
 <body>
-    <script src="js/game.js"></script>
+
+    <div class="bg1"> </div>
+    <div id="game-container">
+        <div id="game">
+        <div id="game-content"></div>
+        </div>
+    </div>
+    
+<script src="js/game.js"></script>
 <script src="js/levels.js"></script>
 <script>
     runGame(GAME_LEVELS, DOMDisplay);

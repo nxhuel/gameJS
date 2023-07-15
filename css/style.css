@@ -1,12 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+}
+
 .background { 
     background: rgb(52, 166, 251);
     table-layout: fixed;
-    border-spacing: 0;   
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    height: 100%; 
 }
 
 .background td { 
     padding: 0;          
 }
+
 .lava {
     background: rgb(255, 100, 100); 
 }
@@ -17,11 +27,16 @@
 .actor { 
     position: absolute;  
 }
-.coin { 
-    background: rgb(241, 229, 89); 
+
+.coin {
+    background-color: #f9c60a;
+    border-radius: 20%;
+    animation: spin 1s infinite linear;
 }
+
 .player {
     background: rgb(64, 64, 64); 
+    border-radius: 20%;
 }
 
 .game {
@@ -36,4 +51,32 @@ background: rgb(160, 64, 64);
 }
 .won .player {
 box-shadow: -4px -7px 8px white, 4px -7px 8px white;
+} 
+
+/* --------------------- */
+
+#game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+#game {
+    background-color: #333;
+    border: 4px solid #555;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    width: 600px;
+    height: 450px;
+    position: relative;
+}
+
+#game-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

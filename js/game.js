@@ -324,7 +324,9 @@ function runAnimation(frameFunc) {
 }
 
 function runLevel(level, Display) {
-  let display = new Display(document.body, level);
+  // let display = new Display(document.body, level);
+  let gameContainer = document.getElementById("game");
+  let display = new DOMDisplay(gameContainer, level);
   let state = State.start(level);
   let ending = 1;
   return new Promise(resolve => {
